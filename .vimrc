@@ -60,6 +60,7 @@ if dein#load_state('~/.vim/cache')
     call dein#add('tpope/vim-surround')
     call dein#add('justmao945/vim-clang', {'on_ft': ['c', 'cpp']})
     call dein#add('vim-syntastic/syntastic')
+    call dein#add('thinca/vim-quickrun')
     call dein#end()
     call dein#save_state()
 endif

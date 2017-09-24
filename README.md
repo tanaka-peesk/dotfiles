@@ -1,2 +1,2 @@
 # My dotfiles
-Execute "sh ~/dotfiles/installer.sh"
+Execute "sh ./installer.sh"

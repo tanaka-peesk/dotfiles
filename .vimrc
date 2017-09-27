@@ -61,6 +61,7 @@ if dein#load_state('~/.vim/cache')
     call dein#add('justmao945/vim-clang', {'on_ft': ['c', 'cpp']})
     call dein#add('vim-syntastic/syntastic')
     call dein#add('thinca/vim-quickrun')
+    call dein#add('miyakogi/seiya.vim')
     call dein#end()
     call dein#save_state()
 endif
@@ -179,6 +180,16 @@ function! s:syntastic()
     SyntasticCheck
 endfunction
 
+"-- syntastic --
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 "-- colorscheme --
 set t_Co=256
 set background=dark
@@ -187,14 +198,5 @@ colorscheme hybrid
 filetype plugin indent on
 syntax enable
 
-"-- vim-indent-guides --
-"let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_auto_colors = 0
-"hi IndentGuidesOdd  ctermbg=none
-"hi IndentGuidesEven ctermbg=235
-
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight LineNr ctermbg=none
-highlight Folded ctermbg=none
-highlight EndOfBuffer ctermbg=none
+"-- seiya.vim --
+let g:seiya_auto_enable=1
